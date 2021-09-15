@@ -40,8 +40,17 @@ const validateCred = array => {
         }
         checkArray.push(doubledArray);
     }
+    // return checkArray;
 
-    return checkArray;
+    for (let j=array.length - 1; j >= 0; j-=2) {
+        normArray.push(array[j]);
+    }
+
+    // return normArray;
+
+    finalArray = normArray.concat(checkArray);
+    
+    return finalArray;
 }
 
 console.log(validateCred(valid1));
