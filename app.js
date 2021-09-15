@@ -5,7 +5,7 @@ const valid3 = [3, 7, 1, 6, 1, 2, 0, 1, 9, 9, 8, 5, 2, 3, 6];
 const valid4 = [6, 0, 1, 1, 1, 4, 4, 3, 4, 0, 6, 8, 2, 9, 0, 5];
 const valid5 = [4, 5, 3, 9, 4, 0, 4, 9, 6, 7, 8, 6, 9, 6, 6, 6];
 
-// All invalid credi card numbers
+// All invalid credit card numbers
 
 const invalid1 = [4, 5, 3, 2, 7, 7, 8, 7, 7, 1, 0, 9, 1, 7, 9, 5];
 const invalid2 = [5, 7, 9, 5, 5, 9, 3, 3, 9, 2, 1, 3, 4, 6, 4, 3];
@@ -65,4 +65,20 @@ const validateCred = array => {
     }
 }
 
-console.log(validateCred(valid1));
+
+const findInvalidCreds = array => {
+    let invalidCreds = [];
+    for (let i = 0; i < array.length; i++) {
+        let batchIndex = array[i];
+
+        if (validateCred(batchIndex) === false) {
+            invalidCreds.push(batchIndex);
+        }
+    }
+
+    return invalidCreds;
+}
+
+console.log(findInvalidCreds(batch));
+
+// console.log(validateCred(valid1));
