@@ -50,7 +50,19 @@ const validateCred = array => {
 
     finalArray = normArray.concat(checkArray);
     
-    return finalArray;
+    // return finalArray;
+
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+    let result = (finalArray.reduce(reducer) % 10);
+
+    // return result;
+
+    if (result === 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 console.log(validateCred(valid1));
