@@ -111,4 +111,4 @@ const idInvalidCardCompanies = array => {
     return companies;
 }
 
-console.log(idInvalidCardCompanies([invalid2]));
+// console.log(idInvalidCardCompanies([invalid2]));
